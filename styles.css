@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #edcef4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    width: 300px;
+  }
+  
+  .form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ccc;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-container input {
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  .form-container button {
+    background: #664d75;
+    color: rgb(236, 230, 234);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .form-container button:hover {
+    background: #c4a6dd;
+  }
+  
+  .form-container .message {
+    color: rgb(179, 168, 248);
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
