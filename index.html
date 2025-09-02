@@ -1,34 +1,199 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Simulador Login / Registro</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Catálogo de Comida Estudiantil Vegana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #f0d3ee;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #ff54da;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #e997e2;
+        }
+
+        main {
+            padding: 30px;
+            text-align: center;
+        }
+
+        section {
+            padding: 30px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .catalogo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tarjeta {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .tarjeta:hover {
+            transform: scale(1.03);
+        }
+
+        .tarjeta img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .contenido {
+            padding: 15px;
+        }
+
+        .contenido h3 {
+            margin-top: 0;
+        }
+
+        footer {
+            background-color: #f0bff0;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
 
-<div class="container">
-  <div class="form-container" id="form-login">
-    <h2>Iniciar Sesión</h2>
-    <input type="text" id="login-email" placeholder="Correo electrónico">
-    <input type="password" id="login-password" placeholder="Contraseña">
-    <button onclick="login()">Entrar</button>
-    <p>¿No tienes cuenta? <a href="#" onclick="mostrarRegistro()">Regístrate</a></p>
-    <p class="message" id="login-message"></p>
-  </div>
+    <header>
+        <h1>Comida Estudiantil Vegana</h1>
+        <p>Fácil, económica y deliciosa</p>
+    </header>
 
-  <div class="form-container hidden" id="form-register">
-    <h2>Registrarse</h2>
-    <input type="text" id="reg-email" placeholder="Correo electrónico">
-    <input type="password" id="reg-password" placeholder="Contraseña">
-    <input type="password" id="reg-confirm" placeholder="Confirmar contraseña">
-    <button onclick="registrar()">Registrarse</button>
-    <p>¿Ya tienes cuenta? <a href="#" onclick="mostrarLogin()">Iniciar sesión</a></p>
-    <p class="message" id="reg-message"></p>
-  </div>
-</div>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Catálogo</a></li>
+            <li><a href="#">Recetas</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
 
-<script src="script.js"></script>
+    <main>
+        <h2>Bienvenido/a</h2>
+        <p>Explora nuestro catálogo de platos veganos ideales para estudiantes.</p>
+    </main>
+
+    <section>
+        <h2>Catálogo de Comida</h2>
+        <div class="catalogo">
+            
+            <div class="tarjeta">
+                <img src="https://source.unsplash.com/400x300/?tofu,vegan" alt="Arroz con tofu">
+                <div class="contenido">
+                    <h3>Arroz con “huevo” vegano</h3>
+                    <p>Tofu revuelto estilo huevo, acompañado de arroz y vegetales.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="https://source.unsplash.com/400x300/?arepa,vegan" alt="Arepas rellenas">
+                <div class="contenido">
+                    <h3>Arepas rellenas veganas</h3>
+                    <p>Arepas con frijoles negros, plátano maduro y aguacate.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="https://source.unsplash.com/400x300/?taco,vegan" alt="Tacos de lentejas">
+                <div class="contenido">
+                    <h3>Tacos de lentejas</h3>
+                    <p>Tortillas rellenas con lentejas guisadas y verduras frescas.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="https://source.unsplash.com/400x300/?vegan-burger" alt="Hamburguesa vegana">
+                <div class="contenido">
+                    <h3>Hamburguesa de garbanzos</h3>
+                    <p>Hamburguesa casera con garbanzos, avena y especias.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="https://source.unsplash.com/400x300/?vegan-pasta" alt="Pasta vegana">
+                <div class="contenido">
+                    <h3>Ensalada de pasta</h3>
+                    <p>Pasta integral fría con vegetales frescos y aderezo vegano.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="https://source.unsplash.com/400x300/?wrap,vegan" alt="Wrap de hummus">
+                <div class="contenido">
+                    <h3>Wrap de hummus</h3>
+                    <p>Tortilla con hummus, zanahoria, espinaca y aguacate.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="https://source.unsplash.com/400x300/?lentil-soup,vegan" alt="Sopa de lentejas">
+                <div class="contenido">
+                    <h3>Sopa de lentejas</h3>
+                    <p>Sopa reconfortante con lentejas, papas, zanahorias y ajo.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="https://source.unsplash.com/400x300/?fried-rice,vegan" alt="Arroz frito con tofu">
+                <div class="contenido">
+                    <h3>Arroz frito con tofu</h3>
+                    <p>Arroz salteado con tofu, verduras y salsa de soya.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+    </footer>
+
 </body>
 </html>
